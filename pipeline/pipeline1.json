@@ -1,0 +1,7 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"description": "This is my first pipeline.",
+		"annotations": []
+	}
+}
