@@ -6,9 +6,9 @@
 			"sources": [
 				{
 					"name": "DelimitedText1",
-					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  DelimitedText1",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> DelimitedText1",
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "cabs",
 						"type": "DatasetReference"
 					}
 				}
