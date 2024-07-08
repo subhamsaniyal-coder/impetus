@@ -1,0 +1,65 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "onlinefraud_1.parquet",
+				"fileSystem": "subhamsdatacontainer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "step",
+				"type": "UTF8"
+			},
+			{
+				"name": "type",
+				"type": "UTF8"
+			},
+			{
+				"name": "amount",
+				"type": "UTF8"
+			},
+			{
+				"name": "nameOrig",
+				"type": "UTF8"
+			},
+			{
+				"name": "oldbalanceOrg",
+				"type": "UTF8"
+			},
+			{
+				"name": "newbalanceOrig",
+				"type": "UTF8"
+			},
+			{
+				"name": "nameDest",
+				"type": "UTF8"
+			},
+			{
+				"name": "oldbalanceDest",
+				"type": "UTF8"
+			},
+			{
+				"name": "newbalanceDest",
+				"type": "UTF8"
+			},
+			{
+				"name": "isFraud",
+				"type": "UTF8"
+			},
+			{
+				"name": "isFlaggedFraud",
+				"type": "UTF8"
+			}
+		]
+	}
+}
