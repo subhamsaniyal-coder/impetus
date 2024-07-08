@@ -1,0 +1,20 @@
+{
+	"name": "powerquery1",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "DelimitedText1",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  DelimitedText1",
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared DelimitedText1 = let AdfDoc = AzureStorage.DataLakeContents(\"https://subhams.dfs.core.windows.net/subhamsdatacontainer/Cabs.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"DelimitedText1\",\r\n  #\"Removed duplicates\" = Table.Distinct(Source) in #\"Removed duplicates\";\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}
