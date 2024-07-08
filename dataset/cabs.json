@@ -1,0 +1,80 @@
+{
+	"name": "cabs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Cabs.csv",
+				"fileSystem": "subhamsdatacontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CabNumber",
+				"type": "String"
+			},
+			{
+				"name": "VehicleLicenseNumber",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "LicenseType",
+				"type": "String"
+			},
+			{
+				"name": "Active",
+				"type": "String"
+			},
+			{
+				"name": "PermitLicenseNumber",
+				"type": "String"
+			},
+			{
+				"name": "VehicleVinNumber",
+				"type": "String"
+			},
+			{
+				"name": "WheelchairAccessible",
+				"type": "String"
+			},
+			{
+				"name": "VehicleYear",
+				"type": "String"
+			},
+			{
+				"name": "VehicleType",
+				"type": "String"
+			},
+			{
+				"name": "TelephoneNumber",
+				"type": "String"
+			},
+			{
+				"name": "Website",
+				"type": "String"
+			},
+			{
+				"name": "Address",
+				"type": "String"
+			},
+			{
+				"name": "LastDateUpdated",
+				"type": "String"
+			}
+		]
+	}
+}
