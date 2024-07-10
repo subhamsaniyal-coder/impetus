@@ -1,0 +1,9 @@
+{
+	"name": "branchingFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "66b61525-2bab-4e52-b94a-d743d0bffcc5",
+		"tenantId": "3a73cd81-4561-45ed-a59f-0c861ed315ce"
+	}
+}
